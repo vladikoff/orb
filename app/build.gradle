@@ -17,8 +17,7 @@ android {
     }
 
     sourceSets {
-        lightningPlus.setRoot('src/LightningPlus')
-        lightningLite.setRoot('src/LightningLite')
+        lightningPlus.setRoot('src/Orb')
     }
 
     buildTypes {
@@ -52,15 +51,9 @@ android {
         lightningPlus {
             dimension "capabilities"
             buildConfigField "boolean", "FULL_VERSION", "Boolean.parseBoolean(\"true\")"
-            applicationId "acr.browser.lightning"
+            applicationId 'orb.browser.lightning'
             versionCode project.versionCode_plus
-        }
-
-        lightningLite {
-            dimension "capabilities"
-            buildConfigField "boolean", "FULL_VERSION", "Boolean.parseBoolean(\"false\")"
-            applicationId "acr.browser.barebones"
-            versionCode project.versionCode_lite
+            minSdkVersion 25
         }
     }
 
@@ -90,6 +83,7 @@ dexcount {
 }
 
 dependencies {
+
     // test dependencies
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.assertj:assertj-core:3.9.0'
@@ -127,7 +121,6 @@ dependencies {
 
     // proxy support
     implementation 'net.i2p.android:client:0.8'
-
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
 
     // file reading
@@ -144,9 +137,7 @@ dependencies {
     final def netCipherVersion = '2.0.0-alpha1'
     implementation "info.guardianproject.netcipher:netcipher:$netCipherVersion"
     implementation "info.guardianproject.netcipher:netcipher-webkit:$netCipherVersion"
-
     implementation 'com.anthonycr.bonsai:bonsai:1.1.0'
-
     implementation 'com.anthonycr.progress:animated-progress:1.0'
 
     // memory leak analysis

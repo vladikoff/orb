@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
-    <string name="app_name">Lightning</string>
+    <string name="app_name">Orb</string>
     <string name="action_new_tab">New tab</string>
     <string name="action_share">Share</string>
     <string name="action_history">History</string>
     <string name="action_bookmarks">Bookmarks</string>
     <string name="action_downloads">Downloads</string>
     <string name="action_add_bookmark">Add bookmark</string>
+    <string name="action_save_to_orb">Save to ORB</string>
     <string name="action_copy">Copy link</string>
     <string name="action_forward">Forward</string>
     <string name="settings">Settings</string>

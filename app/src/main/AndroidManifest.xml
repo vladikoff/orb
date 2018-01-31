@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Orb Development -->
 <!-- Copyright 2014 A.C.R. Development -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="acr.browser.lightning"
+    package="orb.browser.app"
     android:installLocation="auto">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -33,7 +34,7 @@
         android:required="false"/>
 
     <application
-        android:name=".BrowserApp"
+        android:name="orb.browser.app.BrowserApp"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -46,7 +47,7 @@
             android:value="2.1"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name="orb.browser.app.MainActivity"
             android:alwaysRetainTaskState="true"
             android:clearTaskOnLaunch="false"
             android:colorMode="wideColorGamut"
@@ -137,13 +138,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IncognitoActivity"
+            android:name="orb.browser.app.IncognitoActivity"
             android:alwaysRetainTaskState="true"
             android:colorMode="wideColorGamut"
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|keyboard"
             android:label="@string/app_name"
             android:launchMode="singleInstance"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="orb.browser.app.MainActivity"
             android:theme="@style/Theme.DarkTheme"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -153,7 +154,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".settings.activity.SettingsActivity"
+            android:name="orb.browser.app.settings.activity.SettingsActivity"
             android:colorMode="wideColorGamut"
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|keyboard"
             android:label="@string/settings"
@@ -165,7 +166,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".reading.activity.ReadingActivity"
+            android:name="orb.browser.app.reading.activity.ReadingActivity"
             android:colorMode="wideColorGamut"
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|keyboard"
             android:label="@string/reading_mode"
